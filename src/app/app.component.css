@@ -1,0 +1,9 @@
+md-card {
+max-width: 350px;
+margin: 4px;
+}
+
+#card-container {
+display: flex;
+    flex-flow: col wrap;
+}

@@ -8,7 +8,18 @@
 
 
 <md-input-container>
-  <input mdInput placeholder="Search" [(ngModel)]="searchInput" >
+  <input mdInput placeholder="Search" [(ngModel)]="searchInput" (keyup)="performSearch()" >
 </md-input-container>
 
 <br>Results for : <h1>{{searchInput}}</h1>
+
+
+<div id="card-container" *ngFor="let item of result?.data">
+    <md-card class="short" *ngIf=item.images.original.url>
+        <md-card-title-group>
+        <img md-card-lg-image src="{{item?.images.original.url}}">
+        <!-- <md-card-title>Hi</md-card-title> -->
+        <!-- <md-card-subtitle>Have a nice day</md-card-subtitle> -->
+        </md-card-title-group>
+    </md-card>
+</div>
