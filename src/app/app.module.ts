@@ -1,10 +1,12 @@
+import { AppService } from './app.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import {MdInputModule} from '@angular/material';
+import { MdInputModule, MdButtonModule, MdCardModule } from '@angular/material';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -13,11 +15,14 @@ import {MdInputModule} from '@angular/material';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     MdInputModule,
-    FormsModule
+    FormsModule,
+    MdCardModule,
+    MdButtonModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
