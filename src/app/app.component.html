@@ -8,5 +8,7 @@
 
 
 <md-input-container>
-  <input mdInput placeholder="Search" >
+  <input mdInput placeholder="Search" [(ngModel)]="searchInput" >
 </md-input-container>
+
+Results on : <h1>{{searchInput}}</h1>
