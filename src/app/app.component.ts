@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   result: any;
-  title = 'app';
+  title = 'infopark';
   searchInput: string;
-  searchUrl = 'http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=';
+  searchUrl = 'https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q=';
   constructor(public service: AppService) {}
   performSearch() {
     const apiLink = this.searchUrl + this.searchInput + '&limit=5';

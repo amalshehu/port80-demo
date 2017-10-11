@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "port80-infopark",
+    "staging": "port80-infopark"
+  }
+}
